@@ -12,7 +12,7 @@ const Footer = () => {
     const footerNav = [
         { label: 'Home', link: "/" },
         { label: 'About', link: '#about' },
-        { label: 'Pricing', link: '#princing' },
+        { label: 'Pricing', link: '#pricing' },
         { label: 'Faqs', link: "#faqs" },
         { label: 'Contact', link: "#contact" },
     ]

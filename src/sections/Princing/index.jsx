@@ -6,7 +6,7 @@ const Priicng = () => {
 
    
     return (
-        <Div id={'#pricing'}>
+        <Div id={'pricing'}>
             <PricingSectionComp />
         </Div>
     )

@@ -4,7 +4,7 @@ import ContactSectionComp from '../../components/ContactSectionComp'
 
 const Contact = () => {
   return (
-  <Div id={'#contact'} className={' bg-light-black flex justify-center '}>
+  <Div id={'contact'} className={' bg-light-black flex justify-center '}>
     <ContactSectionComp/>
   </Div>
   )

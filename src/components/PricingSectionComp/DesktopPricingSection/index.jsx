@@ -10,29 +10,41 @@ const DesktopPricingSection = ({ PricingData }) => {
     const singleSubCategoryOpen = (index) => {
         setCategoryOpen((prevIndex) => (prevIndex === index ? null : index));
     };
-
     return (
         <div className="w-full ">
             <div className="grid grid-rows-1 grid-cols-1 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 gap-5">
                 {PricingData.map((singlePricingData, index) => (
-                    categoryOpen === 3 ?
-                        <Link to={'/chooseTeam'}><SinglePricingCategoryCard icon={singlePricingData.icon} title={singlePricingData.title} onClick={() => singleSubCategoryOpen(index)} className={`${categoryOpen === index ? '!border-blue' : ''}`} /></Link> :
-                        <SinglePricingCategoryCard icon={singlePricingData.icon} title={singlePricingData.title} onClick={() => singleSubCategoryOpen(index)} className={`${categoryOpen === index ? '!border-blue' : ''}`} />
+                    index === 3 ? (
+                        <Link to={'/chooseTeam'}>
+                            <SinglePricingCategoryCard
+                                icon={singlePricingData.icon}
+                                title={singlePricingData.title}
+                                onClick={() => singleSubCategoryOpen(index)}
+                                className={`${categoryOpen === index ? '!border-blue' : ''}`}
+                            />
+                        </Link>
+                    ) : (
+                        <SinglePricingCategoryCard
+                            icon={singlePricingData.icon}
+                            title={singlePricingData.title}
+                            onClick={() => singleSubCategoryOpen(index)}
+                            className={`${categoryOpen === index ? '!border-blue' : ''}`}
+                        />
+                    )
                 ))}
             </div>
-            {categoryOpen !== null && (
-                <div className={`flex justify-center flex-wrap mt-4 xl:grid xl:grid-rows-1 xl:grid-cols-3 gap-5 w-full `}>
-                    {
-                        categoryOpen === 3 ?
-                            null :
-                            PricingData[categoryOpen].subCategories.map((PricingDataSubCat, index) => {
-                                return (
-                                    < DesktopSingleSubCategoriesCard PricingDataSubCat={PricingDataSubCat} index={index} />
-                                )
-                            })
-                    }
-                </div>
-            )}
+            <div className={`flex justify-center flex-wrap mt-4 xl:grid xl:grid-rows-1 xl:grid-cols-3 gap-5 w-full `}>
+                {
+                    PricingData[categoryOpen]?.subCategories?.map((PricingDataSubCat, index) => {
+                        return (
+                            < DesktopSingleSubCategoriesCard
+                                PricingDataSubCat={PricingDataSubCat}
+                                index={index}
+                            />
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 };

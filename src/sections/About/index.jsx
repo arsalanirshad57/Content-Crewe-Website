@@ -5,7 +5,7 @@ import AboutRight from '../../components/AboutSectionComp/AboutRight'
 
 const About = () => {
     return (
-        <Div  id={'#about'} className={'flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0 bg-light-black '}>
+        <Div  id={'about'} className={'flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0 bg-light-black '}>
             <AboutLeft />
             <AboutRight />
         </Div>

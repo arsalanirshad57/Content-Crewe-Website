@@ -12,7 +12,7 @@ const Faqs = () => {
         {label:'06', question:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptates. Veritatis, voluptates.', answer:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voates. Veritatis, voluptates.'},
     ]
     return (
-        <Div id={'#faqs'}>
+        <Div id={'faqs'}>
             <FaqsSectionComp faqsData={faqsData}/>
         </Div>
     )
