@@ -22,7 +22,7 @@ const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
     isSpecialCategory ? (
       <Link to={'/chooseTeam'}>
         <SinglePricingCategoryCard icon={singlePricingCompData.icon} title={singlePricingCompData.title} />
-      </Link>
+      </Link> 
     ) : (
       <div className=' relative flex flex-col gap-6 border border-border_color pb-20'>
         <div className=" grid grid-cols-3 grid-rows-1 col-span-1 w-full divide-x divide-border_color">
@@ -69,8 +69,10 @@ const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
               ))}
               {
                 singlePricingCompData?.subCategories[subCatgIndex]?.price &&
-                <div className=" absolute bottom-4 w-full">
+                <div className=" absolute bottom-4 w-11/12 mx-auto left-3">
+                  <Link to={'/continuePackage'}>
                   <Button>Continue with ({singlePricingCompData?.subCategories[subCatgIndex]?.price})</Button>
+                  </Link>
                 </div>
               }
             </div>

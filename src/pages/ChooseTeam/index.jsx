@@ -1,13 +1,14 @@
 import React from 'react'
 import NavBar from '../../sections/NavBar'
-import Footer from '../../components/FooterSectionComp'
+import Footer from '../../sections/Footer'
+import CustomTeam from '../../sections/CustomTeam'
 
 const ChooseTeam = () => {
   return (
     <div>
-        <NavBar/>
-
-        {/* <Footer/> */}
+      <NavBar />
+      <CustomTeam />
+      <Footer/>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import FooterSectionComp from '../../components/FooterSectionComp'
 
 const Footer = () => {
     return (
-        <Div >
+        <Div>
             <FooterSectionComp />
         </Div>
     )

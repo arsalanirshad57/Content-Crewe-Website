@@ -2,6 +2,8 @@ import React from 'react'
 import H4 from "../../../Typography/H4";
 import Paragraph from "../../../Typography/Paragraph";
 import Circle from '../../../Circle'
+import Button from '../../../Buttons/Button'
+import { Link } from 'react-router-dom';
 
 const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
 
@@ -41,7 +43,10 @@ const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
                     </div>
                 ))}
                 <div className=" absolute bottom-0 w-full">
-                    <button className={'!bg-blue hover:!scale-[1.02] transition-all duration-500 w-full !border-blue py-2.5 flex justify-center items-center rounded-md mt-3 !font-medium'}> Continue with ({PricingDataSubCat.price})</button>
+
+                    <Link to={'/continuePackage'}>
+                        <Button>Continue with ({PricingDataSubCat.price})</Button>
+                    </Link>
                 </div>
             </div>
         </div >

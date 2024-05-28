@@ -9,7 +9,9 @@ const HeroSectionComp = () => {
             <H1 >Save Your Time <br /> and Money</H1>
             <Paragraph>We help youtubers and entrepreneurs save time, money & grow </Paragraph>
             <Paragraph> their brands with video content </Paragraph>
-            <AnimatedButton className={'mt-5'}>Contact Us</AnimatedButton>
+            <a href="#contact">
+                <AnimatedButton className={'mt-5'}>Contact Us </AnimatedButton>
+            </a>
         </div>
     )
 }
