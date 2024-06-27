@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import ChooseTeam from './pages/ChooseTeam'
-import ContinuePackage from './pages/ContinuePackage'
+import Home from './pages/home'
+import ChooseTeam from './pages/choose-team'
+import ContinuePackage from './pages/continue-package'
 
 const App = () => {
   return (
@@ -10,8 +10,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/chooseTeam' element={<ChooseTeam />} />
-            <Route path='/continuePackage' element={<ContinuePackage />} />
+            <Route path='/ChooseTeam' element={<ChooseTeam />} />
+            <Route path='/ContinuePpackage' element={<ContinuePackage />} />
         </Routes>
       </BrowserRouter>
     </div>

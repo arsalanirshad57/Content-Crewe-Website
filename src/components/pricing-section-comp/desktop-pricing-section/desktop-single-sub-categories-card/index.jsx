@@ -1,0 +1,56 @@
+import React from 'react'
+import H4 from "../../../typography/h4";
+import Paragraph from "../../../typography/paragraph";
+import Circle from '../../../circle'
+import Button from '../../../buttons/button'
+import { Link } from 'react-router-dom';
+
+const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
+
+    return (
+        <div className={` flex flex-col gap-3 w-full p-5 border border-border_color hover:border-blue transition-all duration-700 ${index === 2 ? '' : ''}`}>
+            <H4 className={' !text-2xl text-center !text-blue '}>{PricingDataSubCat?.title}</H4>
+            <Paragraph className={" !text-15px !leading-5 mt-4"}>{PricingDataSubCat?.description}</Paragraph>
+            <div className=' relative pb-14 h-full mt-2'>
+                {PricingDataSubCat?.team?.map((teamData) => (
+                    <div className="flex gap-2 items-start">
+                        <Circle />
+                        <H4 className={'!text-base my-auto text-nowrap'}>{teamData?.name} :</H4>
+                        <Paragraph className={'!text-15px !leading-5 mt-2'}>{teamData.teamQuantity}</Paragraph>
+                    </div>
+                ))}
+                {PricingDataSubCat?.videoOutPut?.map((teamData) => (
+                    <div className="flex gap-2  align-text-top ">
+                        <Circle />
+                        <H4 className={' !text-base my-auto text-nowrap'}>{teamData?.name} :</H4>
+                        <Paragraph className={'!text-15px !leading-5 grow mt-2'}>{teamData?.content}</Paragraph>
+                    </div>
+                ))}
+                {PricingDataSubCat?.services?.map((serviceData) => (
+                    <div className='my-2'>
+                        <H4 className={'!text-base my-auto text-nowrap'}>{serviceData.name}</H4>
+                        <div className="flex flex-col -mt-0.5">
+                            {
+                                serviceData?.points?.map((item) => (
+                                    <div className=' flex gap-2 items-start justify-start'>
+                                        <Circle />
+                                        <Paragraph className={'!text-15px !leading-5 mt-2'}>{item}</Paragraph>
+                                    </div>
+                                ))
+                            }
+
+                        </div>
+                    </div>
+                ))}
+                <div className=" absolute bottom-0 w-full">
+
+                    <Link to={'/continuePackage'}>
+                        <Button>Continue with ({PricingDataSubCat?.price})</Button>
+                    </Link>
+                </div>
+            </div>
+        </div >
+    )
+}
+
+export default DesktopSingleSubCategoriesCard

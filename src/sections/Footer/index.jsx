@@ -1,6 +1,6 @@
 import React from 'react'
-import Div from '../../components/Div'
-import FooterSectionComp from '../../components/FooterSectionComp'
+import Div from '../../components/div'
+import FooterSectionComp from '../../components/footer-section-comp'
 
 
 const Footer = () => {

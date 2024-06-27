@@ -1,6 +1,6 @@
 import React from 'react'
-import FaqsSectionComp from '../../components/FaqsSectionComp'
-import Div from '../../components/Div'
+import FaqsSectionComp from '../../components/faqs-section-comp'
+import Div from '../../components/div'
 
 const Faqs = () => {
     const faqsData = [
@@ -13,7 +13,7 @@ const Faqs = () => {
     ]
     return (
         <Div id={'faqs'}>
-            <FaqsSectionComp faqsData={faqsData}/>
+            <FaqsSectionComp faqsData={faqsData}/> 
         </Div>
     )
 }

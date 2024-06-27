@@ -1,5 +1,5 @@
 import React from 'react'
-import Span from '../Typography/Span'
+import Span from '../typography/span'
 
 
 const index = ({className}) => {

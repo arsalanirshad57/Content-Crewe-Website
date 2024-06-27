@@ -1,13 +1,13 @@
 import React from 'react'
-import NavBar from "../../sections/NavBar"
-import HeroSection from '../../sections/HeroSection'
-import About from '../../sections/About'
-import Hr from '../../components/Hr'
-import WhyUs from '../../sections/WhyUs'
-import Faqs from '../../sections/Faqs'
-import Contact from '../../sections/Contact'
-import Footer from '../../sections/Footer'
-import Priicng from '../../sections/Princing'
+import NavBar from "../../sections/nav-bar"
+import HeroSection from '../../sections/hero-section'
+import About from '../../sections/about'
+import Hr from '../../components/hr'
+import WhyUs from '../../sections/why-us'
+import Faqs from '../../sections/faqs'
+import Footer from '../../sections/footer'
+import Priicng from '../../sections/princing'
+import Contact from '../../sections/contact'
 
 
 const Home = () => {
