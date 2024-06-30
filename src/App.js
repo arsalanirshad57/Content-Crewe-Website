@@ -11,9 +11,9 @@ const App = () => {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/ChooseTeam' element={<ChooseTeam />} />
-            <Route path='/ContinuePpackage' element={<ContinuePackage />} />
+            <Route path='/ContinuePackage' element={<ContinuePackage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
     </div>
   )
 }

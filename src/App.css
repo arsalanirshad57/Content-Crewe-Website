@@ -9,6 +9,12 @@ body {
     scroll-behavior: smooth;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+.hide-scrollbar {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
 }
