@@ -4,7 +4,7 @@ import Paragraph from '../../../typography/paragraph'
 import H4 from "../../../typography/h4";
 import Circle from '../../../circle'
 import Button from '../../../buttons/button'
-import SinglePricingCategoryCard from '../../single-pricing-category-card'
+import SinglePricingCategoryCard from '../../pricing-navigation'
 import { Link } from 'react-router-dom';
 
 const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
@@ -22,7 +22,7 @@ const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
     isSpecialCategory ? (
       <Link to={'/chooseTeam'}>
         <SinglePricingCategoryCard icon={singlePricingCompData?.icon} title={singlePricingCompData?.title} />
-      </Link> 
+      </Link>
     ) : (
       <div className=' relative flex flex-col gap-6 border border-border_color pb-20'>
         <div className=" grid grid-cols-3 grid-rows-1 col-span-1 w-full divide-x divide-border_color">
@@ -33,45 +33,43 @@ const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
           ))}
         </div>
         <div className=" flex flex-col mt-2 px-2">
-          <Paragraph className={"!text-15px !leading-5"}>{singlePricingCompData?.subCategories[subCatgIndex]?.description}</Paragraph>
+          <Paragraph className={"!text-sm !leading-5"}>{singlePricingCompData?.subCategories[subCatgIndex]?.description}</Paragraph>
           {singlePricingCompData?.subCategories &&
             <div className='   h-full mt-2'>
               {singlePricingCompData?.subCategories[subCatgIndex]?.team?.map((teamData) => (
                 <div className=" flex flex-col sm:flex-row gap-1 sm:gap-2 items-start mt-2">
                   <Circle className={' hidden sm:block'} />
                   <H4 className={'!text-base my-auto text-nowrap'}>{teamData.name}</H4>
-                  <H4 className={'!text-base hidden sm:block '}>:</H4>
-                  <Paragraph className={'!text-15px !leading-5 sm:mt-2'}>{teamData.teamQuantity}</Paragraph>
+                  <Paragraph className={'!text-sm !leading-5 sm:mt-2'}>{teamData.teamQuantity}</Paragraph>
                 </div>
               ))}
               {singlePricingCompData?.subCategories[subCatgIndex]?.videoOutPut?.map((teamData) => (
                 <div className=" flex flex-col sm:flex-row gap-1 sm:gap-2 items-start mt-3 sm:mt-2">
                   <Circle className={' hidden sm:block'} />
                   <H4 className={' !text-base my-auto text-nowrap'}>{teamData.name}</H4>
-                  <H4 className={'!text-base hidden sm:block '}>:</H4>
-                  <Paragraph className={'!text-15px !leading-5 grow sm:mt-2'}>{teamData.content}</Paragraph>
+                  <Paragraph className={'!text-sm !leading-5 grow sm:mt-2'}>{teamData.content}</Paragraph>
                 </div>
               ))}
               {singlePricingCompData?.subCategories[subCatgIndex]?.services?.map((serviceData) => (
-                <div className=' mt-3 am:my-2'>
-                  <H4 className={'!text-base my-auto text-nowrap '}>{serviceData.name}</H4>
-                  <div className="flex flex-col  -mt-1 sm:-mt-0.5">
+                <>
+                  <H4 className={'!text-base my-auto text-nowrap mt-3 '}>{serviceData.name}</H4>
+                  <div className="flex flex-col gap-0 ">
                     {
                       serviceData?.points?.map((item) => (
-                        <div className=' flex gap-2 items-center justify-start'>
+                        <div className=' flex gap-2 items-center justify-start -mt-1'>
                           <Circle />
-                          <Paragraph className={'!text-15px !leading-5 '}>{item}</Paragraph>
+                          <Paragraph className={'!text-sm !leading-5 '}>{item}</Paragraph>
                         </div>
                       ))
                     }
                   </div>
-                </div>
+                </>
               ))}
               {
                 singlePricingCompData?.subCategories[subCatgIndex]?.price &&
                 <div className=" absolute bottom-4 w-11/12 mx-auto left-3">
                   <Link to={'/continuePackage'}>
-                  <Button>Continue with ({singlePricingCompData?.subCategories[subCatgIndex]?.price})</Button>
+                    <Button>Continue with ({singlePricingCompData?.subCategories[subCatgIndex]?.price})</Button>
                   </Link>
                 </div>
               }

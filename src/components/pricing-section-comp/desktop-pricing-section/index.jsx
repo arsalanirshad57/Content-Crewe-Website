@@ -1,39 +1,26 @@
 import React, { useState } from 'react';
-import SinglePricingCategoryCard from '../single-pricing-category-card';
+import PricingNavigation from '../pricing-navigation';
 import DesktopSingleSubCategoriesCard from './desktop-single-sub-categories-card'
 
 import { Link } from 'react-router-dom';
 
 const DesktopPricingSection = ({ PricingData }) => {
-    const [categoryOpen, setCategoryOpen] = useState(null);
+    const [categoryOpen, setCategoryOpen] = useState(0);
 
     const singleSubCategoryOpen = (index) => {
-        setCategoryOpen((prevIndex) => (prevIndex === index ? null : index));
+        setCategoryOpen(index);
     };
     return (
         <div className="w-full ">
             <div className="grid grid-rows-1 grid-cols-1 md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 gap-5">
-                {PricingData?.map((singlePricingData, index) => (
-                    index === 3 ? (
-                        <Link to={'/chooseTeam'}>
-                            <SinglePricingCategoryCard
-                                icon={singlePricingData.icon}
-                                title={singlePricingData.title}
-                                onClick={() => singleSubCategoryOpen(index)}
-                                className={`${categoryOpen === index ? '!border-blue' : ''}`}
-                            />
-                        </Link>
-                    ) : (
-                        <SinglePricingCategoryCard
-                            icon={singlePricingData.icon}
-                            title={singlePricingData.title}
-                            onClick={() => singleSubCategoryOpen(index)}
-                            className={`${categoryOpen === index ? '!border-blue' : ''}`}
-                        />
-                    )
-                ))}
+                <PricingNavigation
+                    data={PricingData}
+                    onClick={singleSubCategoryOpen}
+                    categoryOpen={categoryOpen}
+                    setCategoryOpen={setCategoryOpen}
+                />
             </div>
-            <div className={`flex justify-center flex-wrap mt-4 xl:grid xl:grid-rows-1 xl:grid-cols-3 gap-5 w-full `}>
+            <div className={` mt-4 grid grid-rows-3 grid-cols-1 xl:grid-rows-1 xl:grid-cols-3 gap-5 w-full `}>
                 {
                     PricingData[categoryOpen]?.subCategories?.map((PricingDataSubCat, index) => {
                         return (

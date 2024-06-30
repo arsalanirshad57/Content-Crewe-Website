@@ -17,7 +17,7 @@ module.exports = {
         'black': '#121111',
         'light-black': '#18191D',
         'grey': '#a4a7b1',
-        'border_color': 'rgb(255, 255, 255, 0.05)',
+        'border_color': '#333538',
         'blue': '#12c2e9',
         'dark_grey': '#757575'
       },
@@ -38,7 +38,7 @@ module.exports = {
         '50lh': '50px',
         '40lh': '40px',
         '35lh': '35px',
-      },
+      }, 
       letterSpacing: {
         '7tr': '7px'
       },

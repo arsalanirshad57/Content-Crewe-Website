@@ -6,7 +6,7 @@ import ContinuePackage from './pages/continue-package'
 
 const App = () => {
   return (
-    <div className='bg-black text-white '>
+    <div className='bg-black text-white overflow-x-hidden '>
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home />} />
