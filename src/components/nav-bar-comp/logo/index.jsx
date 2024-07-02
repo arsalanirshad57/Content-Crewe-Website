@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <div className='  -ml-3 xl:ml-0  cursor-pointer w-full   '>
       <Link to={'/'} className='relative w-full'>
-        <img src={VideoAseLogo} className=" w-56 -ml-4  border " />
+        <img src={VideoAseLogo} className=" w-56 -ml-4  " />
          {/* <img src={LogoText} className=" w-56 border  " />    */}
       </Link> 
     </div>
