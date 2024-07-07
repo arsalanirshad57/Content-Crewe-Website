@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 body {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    background-color: #121111;
     scroll-behavior: smooth;
 }
 
@@ -18,18 +15,3 @@ html {
     scroll-behavior: smooth;
     -ms-overflow-style: none;
 }
-
-.cls-1 {
-    fill: #7ed5ea;
-  }
-
-  .cls-2 {
-    fill: #008fc3;
-  }
-
-  .cls-3 {
-    fill: #01153a;
-  }
-  svg{
-    width: 500px;
-  }

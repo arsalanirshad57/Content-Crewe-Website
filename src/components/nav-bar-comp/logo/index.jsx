@@ -1,16 +1,16 @@
 import React from 'react'
 import VideoAseLogo from "../../../assets/images/Logo.png"
-import LogoText from "../../../assets/images/logos/logo-text.png"
-import SvgLogo from '../../../assets/images/logos/Transparent-01.svg'
+import LogoText from "../../../assets/images/logo-text.png"
+import SSLogoText from "../../../assets/images/ss-logo.png"
 
 import { Link } from 'react-router-dom'
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <div className='  -ml-3 xl:ml-0  cursor-pointer w-full   '>
+    <div className=' cursor-pointer w-full   '>
       <Link to={'/'} className='relative w-full'>
-        <img src={VideoAseLogo} className=" w-56 -ml-4  " />
-         {/* <img src={LogoText} className=" w-56 border  " />    */}
+        <img src={SSLogoText} alt='logo' loading="lazy" className={` w-56 sm:w-72 h-16 sm:h-20 -ml-2  ${className} `} />
+        {/* <img src={LogoText} className=" w-64 h-20 bg-red-500   " />    */}
       </Link> 
     </div>
   )

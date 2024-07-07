@@ -28,12 +28,12 @@ const FooterSectionComp = () => {
         <div className=' grid grid-rows-3 grid-cols-1 sm:grid-rows-2  sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-5 col-span-1 '>
             <div className=" flex flex-col   ">
                 <div className=" -ml-2 sm:-ml-4 -mb-2">
-                    {/* <Logo /> */}
+                    <Logo className='mb-2 ml-1' />
                 </div>
                 <H5 className={'!font-semibold !text-2xl !tracking-normal'}>Save Your TIme and Money</H5>
                 <Paragraph className={'!text-sm mt-2'}>We help youtubers and entrepreneurs save time, money & grow their brands with video content</Paragraph>
             </div>
-            <div className=" flex  ">
+            <div className=" flex ">
                 <div className=" flex  flex-col gap-3 sm:mx-auto">
                     <H3 className={'!text-dark_grey !text-2xl tracking-wide'} >UseFul Links</H3>
                     {
