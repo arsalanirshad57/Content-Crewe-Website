@@ -1,28 +1,17 @@
 import React from 'react'
-import Paragraph from '../../components/typography/paragraph'
-import H5 from '../../components/typography/h5'
-import H3 from '../../components/typography/h3'
-import AnchorTag from '../../components/typography/anchor-tag'
-import Icon from '../../components/icon'
+import Paragraph from '../typography/paragraph'
+import H5 from '../typography/h5'
+import H3 from '../typography/h3'
+import AnchorTag from '../typography/anchor-tag'
+import Icon from '../icon'
 import SubscribeInput from '../subscribe-input'
-import Logo from '../nav-bar-comp/logo'
+import Logo from '../nav-bar/logo'
+import { footerNav } from '../../data/footer'
+import { footerIcons } from '../../data/footer'
 
 const FooterSectionComp = () => {
 
-    const footerNav = [
-        { id: '1', label: 'Home', link: "/" },
-        { id: '2', label: 'About', link: '#about' },
-        { id: '3', label: 'Pricing', link: '#pricing' },
-        { id: '4', label: 'Faqs', link: "#faqs" },
-        { id: '5', label: 'Contact', link: "#contact" },
-    ]
-    const footerIcons = [
-        { id: '1', icon: 'mage:facebook', link: "" },
-        { id: '2', icon: 'bi:instagram', link: '' },
-        { id: '3', icon: 'mdi:youtube', link: '' },
-        { id: '4', icon: 'ri:linkedin-fill', link: "" },
-        { id: '5', icon: 'mdi:twitter', link: "" },
-    ]
+ 
 
     return (
         <div className=' grid grid-rows-3 grid-cols-1 sm:grid-rows-2  sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-5 col-span-1 '>

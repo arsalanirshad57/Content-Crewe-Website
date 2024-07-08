@@ -35,19 +35,21 @@ const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
             <div className="">
                 <Paragraph className={" !text-15px !leading-5 my-4"}>{PricingDataSubCat?.description}</Paragraph>
                 <div className="flex flex-col">
-                    <Button>Get Started</Button>
-                    <OutlineButton>Chat With Us</OutlineButton>
+                    <Link to='/ContinuePackage'> <Button>Get Started</Button> </Link>
+                    <a href="#contact">
+                        <OutlineButton>Chat With Us</OutlineButton>
+                    </a>
                 </div>
             </div>
             {/* Feature  */}
             <H4 className={'mt-2'}>Features</H4>
             <div className='flex flex-col gap-2'>
-                {PricingDataSubCat?.team?.map((teamData) => ( 
-                    <div className="flex flex-col "> 
-                    <H4 className={'!text-15px my-auto text-nowrap !inline-flex'}>{teamData?.name}</H4>
+                {PricingDataSubCat?.team?.map((teamData) => (
+                    <div className="flex flex-col ">
+                        <H4 className={'!text-15px my-auto text-nowrap !inline-flex'}>{teamData?.name}</H4>
                         <Paragraph className={'!text-sm !leading-4 '}>{teamData.teamQuantity}</Paragraph>
                     </div>
-                ))} 
+                ))}
                 {PricingDataSubCat?.videoOutPut?.map((teamData) => (
                     <div className="flex flex-col ">
                         <H4 className={' !text-15px my-auto text-nowrap'}>{teamData?.name}</H4>
@@ -70,46 +72,6 @@ const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
                     </div>
                 ))}
             </div>
-            {/* <H4 className={' !text-2xl text-center !text-blue '}>{PricingDataSubCat?.title}</H4>
-            <Paragraph className={" !text-15px !leading-5 mt-4"}>{PricingDataSubCat?.description}</Paragraph>
-            <div className=' relative pb-14 h-full mt-2'>
-                {PricingDataSubCat?.team?.map((teamData) => (
-                    <div className="flex gap-2 items-start">
-                        <Circle />
-                        <H4 className={'!text-base my-auto text-nowrap'}>{teamData?.name} :</H4>
-                        <Paragraph className={'!text-15px !leading-5 mt-2'}>{teamData.teamQuantity}</Paragraph>
-                    </div>
-                ))}
-                {PricingDataSubCat?.videoOutPut?.map((teamData) => (
-                    <div className="flex gap-2  align-text-top ">
-                        <Circle />
-                        <H4 className={' !text-base my-auto text-nowrap'}>{teamData?.name} :</H4>
-                        <Paragraph className={'!text-15px !leading-5 grow mt-2'}>{teamData?.content}</Paragraph>
-                    </div>
-                ))}
-                {PricingDataSubCat?.services?.map((serviceData) => (
-                    <div className='my-2'>
-                        <H4 className={'!text-base my-auto text-nowrap'}>{serviceData.name}</H4>
-                        <div className="flex flex-col -mt-0.5">
-                            {
-                                serviceData?.points?.map((item) => (
-                                    <div className=' flex gap-2 items-start justify-start'>
-                                        <Circle />
-                                        <Paragraph className={'!text-15px !leading-5 mt-2'}>{item}</Paragraph>
-                                    </div>
-                                ))
-                            }
-
-                        </div>
-                    </div>
-                ))}
-                <div className=" absolute bottom-0 w-full">
-
-                    <Link to={'/continuePackage'}>
-                        <Button>Continue with ({PricingDataSubCat?.price})</Button>
-                    </Link>
-                </div>
-            </div> */}
         </div>
     )
 }

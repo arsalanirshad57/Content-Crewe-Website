@@ -18,4 +18,4 @@ const AboutLeft = () => {
     )
 }
 
-export default AboutLeft
+export default AboutLeft 

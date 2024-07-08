@@ -1,7 +1,7 @@
 import React from 'react'
 import Div from "../../components/div"
-import AboutLeft from '../../components/about-sections-comp/about-left'
-import AboutRight from '../../components/about-sections-comp/about-right'
+import AboutLeft from '../../components/about/about-left'
+import AboutRight from '../../components/about/about-right'
 
 const About = () => {
     return (

@@ -13,7 +13,7 @@ const WhyUsSection = ({ data }) => {
                 <H2>Why Choose Us for Your <br /> Video Content Creation Needs?</H2>
             </div>
 
-            <div className=" flex flex-col sm-md:flex-row gap-5 sm-md:gap-2 lg:gap-5">
+            <div className=" flex flex-col sm-md:flex-row gap-5 sm:gap-6">
                 {
                     data?.map((item) => (
                       <SingleWhyUS key={item?.id} item={item}/>  

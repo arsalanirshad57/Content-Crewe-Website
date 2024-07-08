@@ -6,40 +6,14 @@ import Input from '../input'
 import TextArea from '../text-area'
 import InputDropdown from '../input-dropdown'
 import AnimatedButton from '../buttons/animated-button'
+import { contStrategyData } from '../../data/custom-team'
+import { VideoEditorData } from '../../data/custom-team'
+import { GraphicDesignerData } from '../../data/custom-team'
+
 
 const CustomTeamComp = () => {
 
-    const contStrategyData = [
-        { label: '1' },
-        { label: '2' },
-        { label: '3' },
-        { label: '4' },
-        { label: '5' },
-    ]
-    const VideoEditorData = [
-        { label: '1' },
-        { label: '2' },
-        { label: '3' },
-        { label: '4' },
-        { label: '5' },
-        { label: '6' },
-        { label: '7' },
-        { label: '8' },
-        { label: '9' },
-        { label: '10' },
-    ]
-    const GraphicDesignerData = [
-        { label: '1' },
-        { label: '2' },
-        { label: '3' },
-        { label: '4' },
-        { label: '5' },
-        { label: '6' },
-        { label: '7' },
-        { label: '8' },
-        { label: '9' },
-        { label: '10' },
-    ]
+
     return (
         <div className=' w-full lg:w-9/12 mx-auto flex flex-col  justify-center items-center  '>
             <div className=" flex flex-col my-10 text-center ">
@@ -59,11 +33,11 @@ const CustomTeamComp = () => {
                     <InputDropdown options={GraphicDesignerData} initialValue={'No of Graphic Designers'} />
                     <InputDropdown options={contStrategyData} initialValue={'No of Content strategists'} />
                 </div>
-                <div className="flex  flex-col   gap-5">
+                <div className="flex  flex-col  gap-5">
                     <Input placeholder={' Any Social Media Link'} type={'text'} />
-                    <TextArea placeholder={'Message'} rows={10} />
+                    <TextArea className={'mt-2'} placeholder={'Message'} rows={10} />
                 </div>
-                <div className="flex justify-end  ">
+                <div className="flex justify-end ">
                     <AnimatedButton >Submit</AnimatedButton>
                 </div>
             </div>

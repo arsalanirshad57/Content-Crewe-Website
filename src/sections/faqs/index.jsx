@@ -1,5 +1,5 @@
 import React from 'react'
-import FaqsSectionComp from '../../components/faqs-section-comp'
+import FaqsSectionComp from '../../components/faqs'
 import Div from '../../components/div'
 import { faqsData } from '../../data/faqs'
 

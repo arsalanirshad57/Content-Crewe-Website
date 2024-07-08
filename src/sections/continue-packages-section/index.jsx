@@ -1,6 +1,6 @@
 import React from 'react'
 import Div from '../../components/div'
-import ContinuePackageSectionComp from '../../components/continue-package-section-comp'
+import ContinuePackageSectionComp from '../../components/continue-package'
 
 
 const ContinuePackageSection = () => {

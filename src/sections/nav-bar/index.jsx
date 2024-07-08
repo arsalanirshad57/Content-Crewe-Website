@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from "../../components/nav-bar-comp/logo"
-import Navigation from "../../components/nav-bar-comp/navigation"
+import Logo from "../../components/nav-bar/logo"
+import Navigation from "../../components/nav-bar/navigation"
 import Div from "../../components/div"
 
 const NavBar = () => {

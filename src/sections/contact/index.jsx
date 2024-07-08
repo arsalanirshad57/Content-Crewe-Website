@@ -1,6 +1,6 @@
 import React from 'react'
 import Div from '../../components/div'
-import ContactSectionComp from '../../components/contact-section-comp'
+import ContactSectionComp from '../../components/contact'
 
 
 const Contact = () => {

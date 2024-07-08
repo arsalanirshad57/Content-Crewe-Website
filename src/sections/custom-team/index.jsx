@@ -1,6 +1,6 @@
 import React from 'react'
 import Div from '../../components/div'
-import CustomTeamComp from '../../components/custom-team-comp'
+import CustomTeamComp from '../../components/custom-team'
 
 const CustomTeam = () => {
   return (

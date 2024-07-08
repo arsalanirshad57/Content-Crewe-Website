@@ -1,6 +1,6 @@
 import React from 'react'
 import Div from '../../components/div'
-import PricingSectionComp from '../../components/pricing-section-comp';
+import PricingSectionComp from '../../components/pricing';
 
 const Priicng = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Div from '../../components/div'
-import HeroSectionComp from '../../components/hero-section-comp'
+import HeroSectionComp from '../../components/hero-section'
 
 const HeroSection = () => {
     return (
