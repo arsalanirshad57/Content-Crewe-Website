@@ -17,7 +17,7 @@ const MobilePricingSection = ({ PricingData }) => {
       <div className={`flex justify-start items-center w-fit gap-1 flex-wrap bg-light-black px-4 py-3 rounded-full `}>
         {
           PricingData?.map((item, index) => (
-            <div className=' flex justify-center items-center flex-wrap gap-0.5 cursor-pointer' >
+            <div key={item?.id} className=' flex justify-center items-center flex-wrap gap-0.5 cursor-pointer' >
               {index !== 3 ? (
                 <>
                   {index == 0  ? '' : <Icon iconName={item?.icon} className={'!text-blue '} />}

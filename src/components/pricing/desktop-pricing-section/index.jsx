@@ -27,10 +27,12 @@ const DesktopPricingSection = ({ PricingData }) => {
                             < DesktopSingleSubCategoriesCard
                                 PricingDataSubCat={PricingDataSubCat}
                                 index={index}
+                                key={index}
+                                compPricingData={PricingData[categoryOpen]}
                             />
                         )
                     })
-                } 
+                }
             </div>
         </div>
     );

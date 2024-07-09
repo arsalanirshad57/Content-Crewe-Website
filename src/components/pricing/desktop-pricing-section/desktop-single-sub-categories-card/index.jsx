@@ -10,10 +10,9 @@ import OutlineButton from '../../../buttons/outline-button'
 import { Link } from 'react-router-dom';
 import Icon from '../../../icon';
 
-const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
-
+const DesktopSingleSubCategoriesCard = ({ key, PricingDataSubCat, compPricingData, index }) => {
     return (
-        <div className={` flex flex-col gap-3 w-full p-5 border border-border_color hover:border-blue rounded-2xl transition-all duration-700 ${index === 1 ? '!border-blue shadow-lg shadow-blue ' : ''}`}>
+        <div key={key} className={` flex flex-col gap-3 w-full p-5 border border-border_color hover:border-blue rounded-2xl transition-all duration-700 ${index === 1 ? '!border-blue shadow-lg shadow-blue ' : ''}`}>
             {/* top  */}
             <div className="w-full flex flex-col gap-5 ">
                 <div className="flex justify-between grow">
@@ -35,7 +34,9 @@ const DesktopSingleSubCategoriesCard = ({ PricingDataSubCat, index }) => {
             <div className="">
                 <Paragraph className={" !text-15px !leading-5 my-4"}>{PricingDataSubCat?.description}</Paragraph>
                 <div className="flex flex-col">
-                    <Link to='/ContinuePackage'> <Button>Get Started</Button> </Link>
+                    <Link to="/ContinuePackage" state={{ CatgoryName: compPricingData?.title, SubCategoryName: PricingDataSubCat?.title }} >
+                        <Button>Get Started</Button>
+                    </Link>
                     <a href="#contact">
                         <OutlineButton>Chat With Us</OutlineButton>
                     </a>

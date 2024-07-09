@@ -9,18 +9,22 @@ export const PricingData = [
                 title: 'Starter Boost',
                 description: 'New YouTubers or those with established channels seeking a refresh.',
                 price: '$2,500 ',
-                team: [{ 
+                team: [{
+                    id: '1',
                     name: 'Team',
                     teamQuantity: '2 Video Editors, 1 Graphic Designer. ',
                 }],
                 videoOutPut: [{
+                    id: '1',
                     name: 'Video OutPut',
                     content: "8-10 Videos per month (10-15 minutes each)."
                 }],
                 services: [{
+                    id: '1',
                     name: 'Services'
                 },
                 {
+                    id: '2',
                     points: [
                         'Expert video editing (cuts, transitions, music integration).',
                         'Eye-catching thumbnail creation.',
@@ -75,14 +79,14 @@ export const PricingData = [
                 label: '03',
                 title: 'Viral Velocity ',
                 description: 'Established short-form influencers ready to explode their reach and engagement. ',
-                team: [{ name: 'Team', teamQuantity: '2 Video Editors, 1 Graphic Designer, 1 Content Strategist (Full).'}],
+                team: [{ name: 'Team', teamQuantity: '2 Video Editors, 1 Graphic Designer, 1 Content Strategist (Full).' }],
                 videoOutPut: [{ name: 'Video OutPut', content: "25-30 Videos per month (1 minute each)." }],
                 services: [{ name: 'Services' }, { points: [' All Content Ignite Package services.', ' Professional video editing with motion graphics and effects.', ' In-depth content strategy (concept development, scripting).', ' Eye-catching custom thumbnail creation', ' Platform-specific optimization tips.'] }],
                 price: '$4,000 ',
             },
         ]
     },
-        {
+    {
         id: '3',
         title: 'Entrepreneurs',
         icon: 'radix-icons:dot-filled',
@@ -95,8 +99,8 @@ export const PricingData = [
                 videoOutPut: [{ name: 'Video OutPut', content: "10-15 videos both long and short." }],
                 services: [{ name: 'Videos Included' }, { points: ['  Product Explainer Videos.', ' Social Media Teasers.', ' Customer Testimonial Video (additional fee).'] }],
                 price: '$3,500 '
-            }, 
-            {  
+            },
+            {
                 label: '02',
                 title: 'Expertise & Trust Builder ',
                 description: 'Established businesses positioning themselves as industry leaders. ',
@@ -113,12 +117,12 @@ export const PricingData = [
                 videoOutPut: [{ name: 'Video OutPut', content: "20-25 videos both long and short." }],
                 services: [{ name: 'Services' }, { points: [' Compelling Video Ads.', ' Landing Page Videos.', ' Product Demonstration Video (additional fee).'] }],
                 price: '$5,500 ',
-            }, 
+            },
         ]
     },
     {
         id: '4',
         title: ' Build Custom Team',
         icon: 'radix-icons:dot-filled',
-    }, 
+    },
 ]  
