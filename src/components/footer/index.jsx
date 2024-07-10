@@ -15,8 +15,8 @@ const FooterSectionComp = () => {
     return (
         <div className=' grid grid-rows-3 grid-cols-1 sm:grid-rows-2  sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-5 col-span-1 '>
             <div className=" flex flex-col">
-                <div className=" -ml-2 sm:-ml-4 -mb-2">
-                    <Logo className='mb-5 ml-4' />
+                <div className="-ml-4 -mb-2">
+                    <Logo className='mb-8 ml-4' />
                 </div>
                 <H5 className={'!font-semibold !text-2xl !tracking-normal'}>Level Up Your Content Creation</H5>
                 <Paragraph className={'!text-sm mt-2'}>Hire Your Future Video Team Now.</Paragraph>

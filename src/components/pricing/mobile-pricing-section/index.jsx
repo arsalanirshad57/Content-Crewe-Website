@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom'
 
 
 const MobilePricingSection = ({ PricingData }) => {
+  console.log(PricingData, PricingData)
   const [PricingIndex, setPricingIndex] = useState(0)
   const handleClick = (index) => {
     setPricingIndex(index)
@@ -20,14 +21,14 @@ const MobilePricingSection = ({ PricingData }) => {
             <div key={item?.id} className=' flex justify-center items-center flex-wrap gap-0.5 cursor-pointer' >
               {index !== 3 ? (
                 <>
-                  {index == 0  ? '' : <Icon iconName={item?.icon} className={'!text-blue '} />}
+                  {index == 0 ? '' : <Icon iconName={item?.icon} className={'!text-blue '} />}
                   <Paragraph className={`  sm:!text-sm !font-medium  ${PricingIndex === index ? '!text-blue' : '!text-white'} `} onClick={() => handleClick(index)}>{item?.title}</Paragraph>
-                </> 
-              ) : ( 
+                </>
+              ) : (
                 <NavLink to='/chooseTeam' className='flex items-center'>
                   <Icon iconName={item?.icon} className={'!text-blue '} />
-                  <Paragraph className={`!text-sm !font-medium ${PricingIndex === index ? '!text-blue' : '!text-white'} `} onClick={() => handleClick(index)}>{item?.title}</Paragraph>  
-                </NavLink> 
+                  <Paragraph className={`!text-sm !font-medium ${PricingIndex === index ? '!text-blue' : '!text-white'} `} onClick={() => handleClick(index)}>{item?.title}</Paragraph>
+                </NavLink>
               )
               }
             </div>

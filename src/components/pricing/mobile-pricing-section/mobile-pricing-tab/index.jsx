@@ -7,7 +7,7 @@ import Button from '../../../buttons/button'
 import SinglePricingCategoryCard from '../../pricing-navigation'
 import { Link } from 'react-router-dom';
 
-const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
+const MobilePricingTab = ({ singlePricingCompData, PricingIndex, }) => {
 
   const [subCatgIndex, setSubCatgindex] = useState(0)
   const isSpecialCategory = PricingIndex === 3;
@@ -68,7 +68,7 @@ const MobilePricingTab = ({ singlePricingCompData, PricingIndex }) => {
               {
                 singlePricingCompData?.subCategories[subCatgIndex]?.price &&
                 <div className=" absolute bottom-4 w-11/12 mx-auto left-3">
-                  <Link to={'/continuePackage'}>
+                  <Link to={'/continuePackage'} state={{ CatgoryName: singlePricingCompData?.title, SubCategoryName: singlePricingCompData?.subCategories[subCatgIndex]?.title }} >
                     <Button>Continue with ({singlePricingCompData?.subCategories[subCatgIndex]?.price})</Button>
                   </Link>
                 </div>

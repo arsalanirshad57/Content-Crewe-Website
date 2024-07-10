@@ -19,7 +19,7 @@ const ContactSectionComp = () => {
         message: Yup.string().required('Please write your Message')
     })
 
-    const defaultVlaues = {
+    const defaultValues = {
         name: '',
         email: '',
         message: '',
@@ -27,10 +27,11 @@ const ContactSectionComp = () => {
 
     const methods = useForm({
         resolver: yupResolver(messageSchema),
-        defaultVlaues,
+        defaultValues,
     })
 
     const { reset, handleSubmit, formState: { errors } } = methods
+
     const onSubmit = (data) => {
         reset()
         console.log(data, 'data');
