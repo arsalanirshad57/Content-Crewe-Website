@@ -11,6 +11,8 @@ import * as Yup from 'yup'
 import { useForm } from 'react-hook-form'
 import RHFInput from '../hook-form/rhf-input'
 import RHFTextArea from '../hook-form/rhf-text-area'
+import toast from 'react-hot-toast'
+import emailjs from '@emailjs/browser';
 
 const CustomTeamComp = () => {
     const location = useLocation()
@@ -40,10 +42,26 @@ const CustomTeamComp = () => {
     })
 
     const { reset, handleSubmit, formState: { errors } } = methods
-    const onSubmit = (data) => {
-        reset()
-        console.log(data, 'data');
-        console.log(errors, 'errors');
+    const onSubmit = async (data) => {
+        try {
+            await emailjs.send(
+                'service_ns73zh3',
+                'template_ylxiivd',
+                {
+                    name: data?.name,
+                    email: data?.email,
+                    category_name: data?.category_name,
+                    package_name: data?.package_name,
+                    social_media_link: data?.social_media_link,
+                    message: data?.message,
+                },
+                "rRd46INl_5iAp_Eay"
+            )
+            reset()
+            toast.success("Message submit Successfully!! ")
+        } catch (error) {
+            toast.error(error?.text)
+        }
     }
     return (
         <div className=' w-full lg:w-9/12 mx-auto flex flex-col  justify-center items-center  '>

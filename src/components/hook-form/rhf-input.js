@@ -14,7 +14,7 @@ const RHFInput = ({ name, type, placeholder, className, readOnly }) => {
                         type={type}
                         placeholder={placeholder}
                         readOnly={readOnly}
-                        autoComplete='off'
+                        autoComplete="off"
                         className={` w-full text-sm sm:text-base tracking-wider focus:outline-none border-b border-dark_grey  bg-transparent py-2  placeholder:!text-dark_grey autofill:not-sr-only  ${className}`}
                     />
                     {errors[name] && <p className='text-sm text-red-500 transition-all duration-500 '>{errors[name]?.message}</p>}
