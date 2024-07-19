@@ -4,12 +4,15 @@ import Home from './pages/home'
 import ChooseTeam from './pages/choose-team'
 import ContinuePackage from './pages/continue-package'
 import { Toaster } from 'react-hot-toast'
+import ScrollToTop from './components/scroll-to-top'
+
 
 const App = () => {
   return (
     <div className='bg-black text-white overflow-x-hidden '>
       <Toaster />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/ChooseTeam' element={<ChooseTeam />} />
