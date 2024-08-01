@@ -16,6 +16,7 @@ import emailjs from '@emailjs/browser';
 
 const CustomTeamComp = () => {
     const location = useLocation()
+    console.log(location, 'location')
     const { CatgoryName, SubCategoryName } = location.state || {};
 
     const continuePackageSchema = Yup.object().shape({

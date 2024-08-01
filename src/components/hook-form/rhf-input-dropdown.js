@@ -50,7 +50,7 @@ const RHFInputDropdown = ({ name, initialValue, options }) => {
                         >
                             <div className="flex items-center sm:mt-1.5 pb-1.5 sm:pb-0">
                                 <Paragraph className={`!text-15px grow ${field.value ? '!text-white' : '!text-dark_grey'}`}>
-                                    {field.value && `${initialValue}: ${field.value}` || `Choose ${initialValue}`}
+                                    {field.value    && `${initialValue}: ${field.value}` || `Choose ${initialValue}`}
                                 </Paragraph>
                                 <Icon iconName={'solar:alt-arrow-down-linear'} className={`!w-5 !h-5 group-hover:text-blue transition-all duration-500 ${openDropdown ? 'rotate-180 !text-blue' : ''}`} />
                             </div>

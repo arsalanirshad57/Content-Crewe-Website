@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import AnchorTag from '../../typography/anchor-tag'
 import Icon from '../../icon'
+import { useLocation } from 'react-router-dom'
+import { navItems } from '../../../data/navigation'
 
-
-const Navigation = ({ navItems }) => {
+const Navigation = () => {
+    const location = useLocation()
+    console.log(location, 'location');
     const [navAtive, setNavActive] = useState(false)
     const [activeOpt, setActiveOpt] = useState('1')
 
@@ -12,7 +15,13 @@ const Navigation = ({ navItems }) => {
             <div className='hidden sm-md:flex gap-5 lg:gap-7'>
                 {
                     navItems?.map((item) => (
-                        <AnchorTag key={item?.id} href={item?.link} onClick={()=>setActiveOpt(item?.id)} className={`${activeOpt === item?.id ? ' !text-blue ' : ''} `}>{item?.name}</AnchorTag>
+                        <AnchorTag
+                            key={item?.id}
+                            href={(location?.pathname === '/ContinuePackage' || '/ChooseTeam') ? `/${item?.link}` : item?.link}
+                            onClick={() => setActiveOpt(item?.id)}
+                            className={`${activeOpt === item?.id ? ' !text-blue ' : ''} `}>
+                            {item?.name}
+                        </AnchorTag>
                     ))
                 }
             </div>

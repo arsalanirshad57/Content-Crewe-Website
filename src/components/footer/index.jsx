@@ -40,7 +40,7 @@ const FooterSectionComp = () => {
                     {
                         footerIcons?.map((item) => (
                             <div key={item?.id} className=" flex justify-center items-center w-12 h-12 border rounded-full border-dark_grey hover:border-blue cursor-pointer group transition-all duration-500  ">
-                                <Icon iconName={item?.icon} className={'!w-5 !h-5 group-hover:!text-blue '} />
+                                <Icon iconName={item?.icon} className={'!w-5 !h-5 group-hover:!text-blue  '} />
                             </div> 
                         ))
                     }

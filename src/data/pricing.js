@@ -38,7 +38,7 @@ export const PricingData = [
                 description: ' Growing YouTubers seeking to refine their content and strategy.',
                 team: [{ name: 'Team', teamQuantity: '3 Video Editors, 1 Graphic Designer, 1 Content Strategist (Lite) ' }],
                 videoOutPut: [{ name: 'Video OutPut', content: "12-15 Videos per month (10-20 minutes each)" }],
-                services: [{ name: 'Services' }, { points: [' All Starter Boost Package services', 'Advanced video editing (color correction, motion graphics - limited)', 'Content brainstorming and keyword research', ' Basic script outlines (optional)'] }],
+                services: [{ name: 'Services' }, { points: [' All Starter Boost.', 'Advanced video editing (color correction, motion graphics - limited)', 'Content brainstorming and keyword research', ' Basic script outlines (optional)'] }],
                 price: '$4,500 '
             },
             {
@@ -47,7 +47,7 @@ export const PricingData = [
                 description: ' Established YouTubers ready to take their channel to the next level. ',
                 team: [{ name: 'Team', teamQuantity: '3 Video Editors, 2 Graphic Designers, 1 Content Strategist (Full). ' }],
                 videoOutPut: [{ name: 'Video OutPut', content: "18-22 Videos per month (10-20 minutes each)" }],
-                services: [{ name: 'Services' }, { points: [' All Content Creator Package services', ' In-depth content strategy (topic research, scripting)', ' Professional video editing (extensive motion graphics)', 'SEO optimization for YouTube', ' 2 Social media post designs per video'] }],
+                services: [{ name: 'Services' }, { points: [' All Content Creator.', ' In-depth content strategy (topic research, scripting)', ' Professional video editing (extensive motion graphics)', 'SEO optimization for YouTube', ' 2 Social media post designs per video'] }],
                 price: '$6,000 '
             },
         ]
@@ -72,7 +72,7 @@ export const PricingData = [
                 description: ' Growing short-form influencers refining their content and audience engagement.',
                 team: [{ name: 'Team', teamQuantity: '2 Video Editors, 1 Content Strategist (Lite).' }],
                 videoOutPut: [{ name: 'Video OutPut', content: "20 Videos per month (1 minute each)." }],
-                services: [{ name: 'Services' }, { points: [' All Spark Up Package services.', '  Content brainstorming and trending topic research.', '  Basic script outlines (optional).', ' Hashtag and caption strategy suggestions.'] }],
+                services: [{ name: 'Services' }, { points: [' All Spark Up.', '  Content brainstorming and trending topic research.', '  Basic script outlines (optional).', ' Hashtag and caption strategy suggestions.'] }],
                 price: '$2,500 '
             },
             {
@@ -81,7 +81,7 @@ export const PricingData = [
                 description: 'Established short-form influencers ready to explode their reach and engagement. ',
                 team: [{ name: 'Team', teamQuantity: '2 Video Editors, 1 Graphic Designer, 1 Content Strategist (Full).' }],
                 videoOutPut: [{ name: 'Video OutPut', content: "25-30 Videos per month (1 minute each)." }],
-                services: [{ name: 'Services' }, { points: [' All Content Ignite Package services.', ' Professional video editing with motion graphics and effects.', ' In-depth content strategy (concept development, scripting).', ' Eye-catching custom thumbnail creation', ' Platform-specific optimization tips.'] }],
+                services: [{ name: 'Services' }, { points: [' All Content Ignite.', ' Professional video editing with motion graphics and effects.', ' In-depth content strategy (concept development, scripting).', ' Eye-catching custom thumbnail creation', ' Platform-specific optimization tips.'] }],
                 price: '$4,000 ',
             },
         ]
@@ -96,7 +96,7 @@ export const PricingData = [
                 title: ' Brand Launch Boost ',
                 description: ' New businesses creating a strong first impression. ',
                 team: [{ name: 'Team', teamQuantity: '2 Video Editors, 1 Graphic Designer. ' }],
-                videoOutPut: [{ name: 'Video OutPut', content: "10-15 videos both long and short." }],
+                videoOutPut: [{ name: 'Video OutPut', content: "8-10 Videos per month (10-15 minutes each) " }],
                 services: [{ name: 'Videos Included' }, { points: ['  Product Explainer Videos.', ' Social Media Teasers.', ' Customer Testimonial Video (additional fee).'] }],
                 price: '$3,500 '
             },
@@ -105,7 +105,7 @@ export const PricingData = [
                 title: 'Expertise & Trust Builder ',
                 description: 'Established businesses positioning themselves as industry leaders. ',
                 team: [{ name: 'Team', teamQuantity: '3 Video Editors, 1 Graphic Designer, 1 Content Strategist (Lite) ' }],
-                videoOutPut: [{ name: 'Video OutPut', content: "8-10 Videos per month (10-15 minutes each)" }],
+                videoOutPut: [{ name: 'Video OutPut', content: "10-15 videos both long and short." }],
                 services: [{ name: 'Services' }, { points: [' Educational Tutorials.', ' Customer Testimonial Videos.', ' Social Media Promo Videos.'] }],
                 price: '$4,500'
             },
